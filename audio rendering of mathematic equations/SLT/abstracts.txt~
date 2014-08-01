@@ -1,0 +1,204 @@
+Abstracts :
+
+
+
+Why is it that people cannot keep their hands still when
+they talk? One reason may be that gesturing actually lightens cogni-
+tive load while a person is thinking of what to say. We asked adults
+and children to remember a list of letters or words while explaining
+how they solved a math problem. Both groups remembered signifi-
+cantly more items when they gestured during their math explanations
+than when they did not gesture. Gesturing appeared to save the speak-
+ers’ cognitive resources on the explanation task, permitting the speak-
+ers to allocate more resources to the memory task. It is widely
+accepted that gesturing reflects a speaker’s cognitive state, but our ob-
+servations suggest that, by reducing cognitive load, gesturing may
+also play a role in shaping that state.
+
+
+
+
+
+This paper discusses the teaching - learning process of mathematical subjects made accessible to visually
+disabled students. It aims to provide users a friendly vocal interface with computer and allow visually impaired
+people to use the computer. It focuses on the issues that arise from representation, encoding and manipulation of
+mathematics in electronic media.
+Professionals use tools like LaTeX that result in encoding of mathematics, symbols and expressions. A well
+encoded MathML expression can be evaluated in a computer algebra system rendered in a web browser. Some
+approaches for achieving the transformations from MathML to speech output are mentioned in this paper.
+A Text-To-Speech (TTS) system that supports JSML is responsible for rendering a document as spoken output.
+The challenge for educational institutions is, as they increase the use of e learning, they must apply these
+techniques in a way that does not introduce unnecessary barriers to disabled learners.
+
+
+
+Gesturing is ubiquitous in communication and serves an important function
+for listeners, who are able to glean meaningful information from the gestures
+they see. But gesturing also functions for speakers, whose own gestures reduce
+demands on their working memory. Here we ask whether gesture’s beneficial
+effects on working memory stem from its properties as a rhythmic movement,
+or as a vehicle for representing meaning. We asked speakers to remember letters
+while explaining their solutions to math problems and producing varying types
+of movements. Speakers recalled significantly more letters when producing
+movements that coordinated with the meaning of the accompanying speech,
+i.e., when gesturing, than when producing meaningless movements or no
+movement. The beneficial effects that accrue to speakers when gesturing thus
+seem to stem not merely from the fact that their hands are moving, but from the
+fact that their hands are moving in coordination with the content of speech
+
+
+
+
+
+It is likely that most people can communicate mathematics to a computer more effectively (rapidly
+and accurately) by speaking than they can by using a stylus on a computer tablet. This may seem
+surprising, but is our speculation based on trying various alternative input methods. An even better
+setup may be to speak and simultaneously use pointing or handwriting. Unfortunately, building a
+properly functioning prototype using this concept is dicult. Yet a successful implementation of such a
+\multimodal" combination should allow the computer to reinforce correct recognition while identifying
+and perhaps repairing \unimodal" errors. In some cases speaking
+may be more convenient than typing,
+even for rapid typists
+: many mathematical symbols are missing from the keyboard but can be easily
+spoken and recognized. Even without venturing into Greek, or alternative fonts, just handwriting or
+even typing a number, say fifty million" may be slower and more error-prone than speaking.
+Pursuing the goal of effectively speaking and recognizing small pieces of mathematics, led to a study
+of how hard it would be to speak arbitrarily long sections of mathematics, including nested complex
+expressions.
+We frst describe programs for the inverse problem: computer generation of mathematical speech.
+This requires that we address some speaking conventions to overcome the unfortunately ambiguous and
+inconsistent common usages of mathematics.
+Then we consider tools and guidelines to make it more plausible for humans to speak full mathematical
+formulas unambiguously so they can be recognized by a computer using a speech recognizer program.
+We describe our prototype programs which do somewhat less than we propose, but are eective in that
+speech can either be used alone, or used to ll in boxes (superscripts, etc.) or larger pieces. Speech can
+also be used for choosing alternatives from plausible symbols resulting from uncertain recognition from
+handwriting (or speech). We believe the principal barriers to engineering a more complete program can
+be overcome, though a driving application may be essential for rening prototypes into useful programs.
+This paper is not intended to be the last word on the subject, but simply exposes problems and approaches
+relevant to the task. Demonstrations of partial implementations are available as Window (XP) programs.
+
+
+The current study examined the use of different techniques to provide unique modes of prompting and rendering mathematical content in audio.
+
+The experimentation observes the impact the techniques can have through measuring factors like listening effort, intonation and various other cues used in each of these techniques.
+
+each of these techniqiues can have in effectively conveying Math auditorily.
+
+
+The two part study involved observing human speech patterns while reading math and identifying the relevance of the proposed techniques to the jargon of math and audio. 
+
+****************************************************
+
+Text to speech systems are continuing to evolve greatly in the recent times. Voices are sounding more natural and different kinds of information is becoming accessible. However, a
+major area in which the current day TTS systems and screen
+readers are trailing is mathematical and scientific equations.
+%Mathematics have a significant amount of information hid-
+den in spacial arrangement of numbers and symbols. Reading
+mathematics like any other english sentence is not the most
+effective way of auditory communicating math to a listener.%
+This document talks about a few methods we could formulate
+to effectively convey math to a listener.
+
+
+
+
+
+
+
+Text to speech(TTS) systems are continuing to evolve greatly in the recent times with human like voices and huge amount of information
+
+accessibility. They also hold promise as a supplementary tool for information access for people with learning and print
+
+disabilities . However, a major area in which the current day TTS systems and screen readers are trailing is mathematical and scientific
+
+equations.
+
+
+The purpose of this article is to
+
+The idea of the research documented in this article is to : 
+
+  (a) understand the ambiguities in rendering math through the audio in digital media
+
+  (b) propose and provide a subjective measure on a few techniques that could enhance the current ambiguities 
+
+The two part study involved observing human speech patterns while reading math and identifying the relevance of the proposed techniques to the jargon of math and audio. 
+
+Each of the proposed techniques renders math in audio by using various paralinguistic cues such as pauses, sounds,pitch and rate changes in addition to speech. #is to draw a close connection to the way math is expressed in print through 3 dimensional audio.
+
+The experimentation observes the impact the techniques can have through measuring factors like listening effort, intonation and various other cues used in each of these techniques.
+
+is to draw a close connection to the way math is expressed in print through 3 dimensional audio.
+
+
+
+
+
+
+
+****************************************************
+
+
+
+ multiple-baseline design across subjects was used to investigate the effects of word prediction and textto-speech alone and in combination on four narrative composition-writing skills (writing fluency, syntax, spelling accuracy, and overall organization) of six fifth-grade Hispanic boys with specific learning disabilities (SLD). Participants were divided randomly and equally into Cohorts A and B. During baseline, both cohorts wrote for 15-minute sessions using word processing only. During intervention, Cohort A participants used word prediction, and then word prediction with text-to-speech. Concurrently, Cohort B participants used text-to-speech followed by text-to-speech with word prediction. The results indicated that word prediction alone or in combination with text-to-speech had a positive effect on the narrative composition-writing skills of the targeted students. With text-to-speech alone, inconsequential results were observed.
+
+
+owever, strategies such as the use of visual or auditory prompting to assist with task completion to improve employment outcomes may be provided by assistive technology (AT). The current study examined the use of readily available, inexpensive, and discrete portable electronic AT in an office setting to provide three unique modes of prompting and instruction (video, audio, and a combination of both) for three young adults with ID. Results revealed the AT was highly effective for increasing participants’ ability to independently and correctly complete office-related tasks, yet the type of prompt that was provided had no effect on performance. Implications and suggestions for future research are provided.
+
+wo-part study investigated the effects of a multiphase teacher professional development package on student speech-generating augmentative and alternative communication device (SGD) use. In Part 1, teachers were taught (a) device operation and programming, (b) device integration and embedding, and (c) systematic communication instruction using time delay. The teacher professional learning intervention and the effect on teacher performance were discussed in detail. Part 2 of the study demonstrated the effect of teacher per-formance on student learning outcomes. This study demonstrated that there was no effect on student SGD use during teacher learning Phase 1 (device operation). However, all students showed substantial increases in SGD initiations during teacher learning Phase 2 (integration and embedding), and SGD initiations remained at high levels through teacher learning Phase 3 (systematic communication instruction). SGD initiations increased further for students with the most significant disabilities during teacher learning Phase 3. Overall, minimal effects were found for student SGD responses. This study has implications for service provision to students who use SGDs and/or other assistive technology (AT) in the classroom. At highlights the need to measure student outcomes when implementing professional learning for teachers or developing service provision models involving teachers in client classrooms. Student outcomes will determine the efficacy of such inservice and support and will assist in determining the types of professional learning practices that are likely to achieve desired student outcomes.
+
+Text-to-speech (TTS) technology holds promise as a compensatory tool for adolescents with learning disabilities in accessing grade-level expository text. A multiple-baseline-across-participants design examined the effectiveness of TTS on oral reading fluency, comprehension, and task completion time for two males and one female with reading disabilities in a Midwest junior high school. TTS did not affect students’ fluency, comprehension, or task completion time, although social validity interviews revealed that each student valued the independence and efficiency TTS provided. Students believed they comprehended fully, read more fluently, and finished the reading task more quickly with TTS than without it. Limitations and implications for future research are addressed in this article.
+
+To educate students with complex communication needs and use speech generating devices (SGDs) or other assistive technology (AT) in the classroom, teachers must develop sufficient knowledge and skills and receive adequate support to achieve desired student learning outcomes. Current professional development practices such as workshops and inservice may not be sufficient to achieve effective transference of skills to practice in the classroom. This two-part study investigated the effects of a multiphase teacher professional development package on student SGD use. Part 1 of this study focused on teacher professional learning. Teachers were taught (a) device operation and programming, (b) device integration and embedding, and (c) systematic communication instruction using time delay. All teachers learned device programming and instructional procedures and maintained as well as generalized their use. Part 2 of this study demonstrated the effects of the teachers’ acquired skills on student communication and SGD use. Part 1 has implications for the profes-sional development and support of teachers who educate students with complex communication needs who use SGDs or other AT in the classroom. For a detailed investigation of student communication outcomes, see the discussion of Part 2 of the investigation, which follows.
+
+
+
+
+The goal of a mathematics read aloud accommodation is to provide better access to test content and achieve a more accurate indicator of students’ math knowledge by minimizing the measurement of constructs such as vision and reading ability. This article highlights recent Mathematics eText Research Center (MeTRC) research on the audio representation of four mathematics content types: parentheses, exponents, tables, and graphs that contain keys. Researchers from the Measured Progress Innovation Lab used qualitative and quantitative research methods to explore differences in performance and preferences when literal and interpretive audio representations were applied to practice test items. Results demonstrated that students prefer and perform better with a literal interpretation of parentheses. Quantitative and qualitative data were mixed for the other content types. As states and assessment consortia transition to computer-based tests with embedded accessibility supports, more research is needed in order to create a set of guidelines for how to appropriately represent mathematical notation, graphics, and images in audio form.
+
+
+
+The purpose of this article is to (a) describe findings from a fiveyear research project at the University of Hawaii at Manoa that demonstrate the importance of postsecondary school for individuals with disabilities and highlights the current status of postsecondary access for these individuals, (b) discuss barriers to the successful transition between secondary school and postsecondary school for youth with disabilities, and (c) explore the implications of these findings for secondary school preparation.
+
+
+
+This study compared a touch-free switch, which does not require physical access, with a physical touch-based switch, on several criteria such as speed, accuracy, and preference. Six children with physical disabilities, ages 7 to 15, completed computer activities with both switches. A mixed methodology of both quantitative and qualitative procedures was used. These included collecting data on the speed and accuracy of the participants when using each switch, and both student and caregiver/professional interviews. The findings suggested that both switches had advantages and disadvantages.
+
+
+
+
+Participants produced monthly, 10-minute writing samples about a specified topic using symbol supported writing software. The writing samples were examined with regard to writing rate, conventions, and two measures of writing quality. Results suggest that symbol-supported writing software can contribute to improved writing rate as well as increased opportunities for writing practice. The results are discussed in terms of implications, limitations, and future research.
+
+
+
+This exploratory study was conducted with a group of teachers at four partnership school sites (elementary, middle, and high school) who taught students with a range of disabilities. The study was designed to gain insight into how these teachers used interactive whiteboard technology (IWBT) in their classrooms, to ascertain their perceptions regarding the use of this technology for students with disabilities (SWD), and to learn about their perceptions regarding professional development needs related to the effective use of IWBT for SWD. Two points of focus were the extent to which these teachers’ use of IWBT complemented research-supported instructional practices for SWD and the impact of contextual factors on their practice. Implications and suggestions for future research are discus
+
+
+the standard way of communicating mathematical information is by using a distinct notational language rather than the "plain English" found in most literature. The notational language of mathematics combines a broad array of numbers, Roman and Greek alphabetic characters, and a host of other non-alphanumeric symbols with precise meanings which may change depending upon the math discipline and the context in which the symbols are used. 
+
+Although a sighted person can browse a complex equation and quickly ascertain important implicit information based upon the spatial position of various elements of the expression, this is very difficult to do with an audio stream because of its linear nature. 
+
+
+This study provides a snapshot of factors associated with assistive technology (AT) use in one large Midwestern state. Conducted about 25 years after the passage of the original Technology Related Assistance Act, the study presents results from a survey of 1,143 Michigan educators. Results of the study show that respondents use technology frequently in their personal and professional liv
+
+
+
+
+
+#
+
+
+
+
+
+It aims to provide users a friendly vocal interface with computer and allow visually impaired
+people to use the computer. It focuses on the issues that arise from representation, encoding and manipulation of
+mathematics in electronic media.
+Professionals use tools like LaTeX that result in encoding of mathematics, symbols and expressions. A well
+encoded MathML expression can be evaluated in a computer algebra system rendered in a web browser. Some
+approaches for achieving the transformations from MathML to speech output are mentioned in this paper.
+
+they must apply these
+techniques in a way that does not introduce unnecessary barriers to disabled learners.
+

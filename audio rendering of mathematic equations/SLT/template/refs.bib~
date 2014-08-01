@@ -1,0 +1,81 @@
+@inproceedings{soiffer2005mathplayer,
+  title={MathPlayer: web-based math accessibility},
+  author={Soiffer, Neil},
+  booktitle={Proceedings of the 7th international ACM SIGACCESS conference on Computers and accessibility},
+  pages={204--205},
+  year={2005},
+  organization={ACM}
+}
+
+@book{raman1998audio,
+  title={Audio system for technical readings},
+  author={Raman, TV},
+  year={1998},
+  publisher={Springer}
+}
+
+@book{ferreira2004enhancing,
+  title={Enhancing the accessibility of mathematics for blind people: the AudioMath project},
+  author={Ferreira, Helder and Freitas, Diamantino},
+  year={2004},
+  publisher={Springer}
+}
+
+@article{umadevicertain,
+  title={CERTAIN APPROACHES FOR A COMPLETE MATHEMATICAL TEXT-TO-SPEECH SYSTEM},
+  author={UMADEVI, RS},
+  publisher={Citeseer}
+}
+
+@article{chang1983handbook,
+  title={Handbook for spoken mathematics},
+  author={Chang, Larry A and White, CM and Abrahamson, L},
+  journal={Lawrence Livermore National Laboratory},
+  year={1983}
+}
+
+
+@inproceedings{geronazzo2011head,
+  title={A head-related transfer function model for real-time customized 3-D sound rendering},
+  author={Geronazzo, Michele and Spagnol, Simone and Avanzini, Federico},
+  booktitle={Signal-Image Technology and Internet-Based Systems (SITIS), 2011 Seventh International Conference on},
+  pages={174--179},
+  year={2011},
+  organization={IEEE}
+}
+
+@article{algazi2001elevation,
+  title={Elevation localization and head-related transfer function analysis at low frequencies},
+  author={Algazi, V Ralph and Avendano, Carlos and Duda, Richard O},
+  journal={The Journal of the Acoustical Society of America},
+  volume={109},
+  number={3},
+  pages={1110--1122},
+  year={2001},
+  publisher={Acoustical Society of America}
+}
+
+@article{fateman1998can,
+  title={How can we speak math},
+  author={Fateman, Richard},
+  journal={Journal of Symbolic Computation},
+  volume={25},
+  number={2},
+  year={1998}
+}
+
+@inproceedings{dingler2008learnability,
+  title={Learnability of sound cues for environmental features: Auditory icons, earcons, spearcons, and speech},
+  author={Dingler, Tilman and Lindsay, Jeffrey and Walker, Bruce N and others},
+  booktitle={Proceedings of the 14th International Conference on Auditory Display, Paris, France},
+  pages={1--6},
+  year={2008}
+}
+
+@inproceedings{hinterleitner2011evaluation,
+  title={An evaluation protocol for the subjective assessment of text-to-speech in audiobook reading tasks},
+  author={Hinterleitner, Florian and Neitzel, Georgina and M{\"o}ller, Sebastian and Norrenbrock, Christoph},
+  booktitle={Proceedings of the Blizzard challenge workshop, Florence, Italy},
+  year={2011},
+  organization={Citeseer}
+}

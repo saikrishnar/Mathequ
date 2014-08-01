@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{nemeth1973nemeth}
+Abraham Nemeth, National~Braille Association, et~al.,
+\newblock {\em The Nemeth Braille Code for mathematics and science notation},
+\newblock American Print. House for the Blind, 1973.
+
+\bibitem{raman1998audio}
+TV~Raman,
+\newblock {\em Audio system for technical readings},
+\newblock Springer, 1998.
+
+\bibitem{soiffer2005mathplayer}
+Neil Soiffer,
+\newblock ``Mathplayer: web-based math accessibility,''
+\newblock in {\em Proceedings of the 7th international ACM SIGACCESS conference
+  on Computers and accessibility}. ACM, 2005, pp. 204--205.
+
+\bibitem{chang1983handbook}
+Larry~A Chang, CM~White, and L~Abrahamson,
+\newblock ``Handbook for spoken mathematics,''
+\newblock {\em Lawrence Livermore National Laboratory}, 1983.
+
+\bibitem{fateman1998can}
+Richard Fateman,
+\newblock ``How can we speak math,''
+\newblock {\em Journal of Symbolic Computation}, vol. 25, no. 2, 1998.
+
+\bibitem{dingler2008learnability}
+Tilman Dingler, Jeffrey Lindsay, Bruce~N Walker, et~al.,
+\newblock ``Learnability of sound cues for environmental features: Auditory
+  icons, earcons, spearcons, and speech,''
+\newblock in {\em Proceedings of the 14th International Conference on Auditory
+  Display, Paris, France}, 2008, pp. 1--6.
+
+\bibitem{geronazzo2011head}
+Michele Geronazzo, Simone Spagnol, and Federico Avanzini,
+\newblock ``A head-related transfer function model for real-time customized 3-d
+  sound rendering,''
+\newblock in {\em Signal-Image Technology and Internet-Based Systems (SITIS),
+  2011 Seventh International Conference on}. IEEE, 2011, pp. 174--179.
+
+\bibitem{hinterleitner2011evaluation}
+Florian Hinterleitner, Georgina Neitzel, Sebastian M{\"o}ller, and Christoph
+  Norrenbrock,
+\newblock ``An evaluation protocol for the subjective assessment of
+  text-to-speech in audiobook reading tasks,''
+\newblock in {\em Proceedings of the Blizzard challenge workshop, Florence,
+  Italy}. Citeseer, 2011.
+
+\end{thebibliography}

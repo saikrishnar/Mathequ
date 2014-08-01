@@ -1,0 +1,11 @@
+Links for reference:
+
+1.
+http://metrc.uoregon.edu/index.php/how-can-mathematical-text-be-made-accessible-to-students-with-print-disabilities.html
+An overview of accessible math.
+
+A White paper on accessible math by design science:
+http://www.dessci.com/en/reference/accessibility/
+
+nemith code:
+http://www.washington.edu/doit/Stem/articles?42

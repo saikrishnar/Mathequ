@@ -1,0 +1,460 @@
+% Template for ICIP-2012 paper; to be used with:
+%          spconf.sty  - ICASSP/ICIP LaTeX style file, and
+%          IEEEbib.bst - IEEE bibliography style file.
+% --------------------------------------------------------------------------
+\documentclass{article}
+\usepackage{spconf,amsmath,graphicx,qtree,tabularx}
+\usepackage{graphicx}
+\graphicspath{ {/home/sai/Pictures/} }
+\usepackage{appendix}
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+% Title.
+% ------
+\title{AUDIO RENDERING OF MATHEMATICAL EQUATIONS}
+%
+% Single address.
+% ---------------
+\name{Venkatesh Potluri, Sai Krishna Rallabandi, Kishore Prahallad}
+\address{International Institute of Information Technology, Hyderabad}
+         
+%
+% For example:
+% ------------
+%\address{School\\
+%	Department\\
+%	Address}
+%
+% Two addresses (uncomment and modify for two-address case).
+% ----------------------------------------------------------
+%\twoauthors
+%  {A. Author-one, B. Author-two\sthanks{Thanks to XYZ agency for funding.}}
+%	{School A-B\\
+%	Department A-B\\
+%	Address A-B}
+%  {C. Author-three, D. Author-four\sthanks{The fourth author performed the work
+%	while at ...}}
+%	{School C-D\\
+%	Department C-D\\
+%	Address C-D}
+%
+\begin{document}
+%\ninept
+%
+\maketitle
+%
+\begin{abstract}
+
+Text to speech (TTS) systems hold promise as an information access tool for people with learning and print disabilities. However, audio rendering of mathematical equations using TTS is not very effective till date. In this paper, we address this problem by proposing five different techniques which exploit the paralinguistic cues such as pauses, special sounds, pitch variations and spatialization of speech. A subjective evaluation was performed on each technique. The evaluation considered 10 aspects such as listening effort, content familiarity, accentuation, intonation, etc. The work provides analysis on the different possibilities that can be employed to effectively render mathematics through audio.
+
+
+\end{abstract}
+%
+\begin{keywords}
+ Audio Rendering, Paralinguistic cues, ScreenReader, MathML, Spatialization
+\end{keywords}
+%
+\section{Introduction}
+\label{sec:intro}
+Mathematical equations comprise of different types of visual cues to convey their semantic meaning. Some of these visual cues are superscripts, subscripts, parentheses,etc. The objective of this paper is to propose techniques which may unambiguously render the equations in audio. It provides a subjective analysis on the performance of each of the proposed techniques.
+
+
+Section \ref{ssec:significance} talks about the significance of the problem and section \ref{ssec:previous} gives an overview of some of the existing methods relevant to audio rendering of mathematical content. 
+
+\subsection{Significance}
+\label{ssec:significance}
+
+
+
+
+Despite advances in screen reading and text to speech technologies, the problem of reading complex math remains majorly unsolved. Speaking the equation just as any other string of text, a line, or a sentence will not suffice to effectively render mathematics in speech. For instance, $e^{x+1}-1$ denotes that the value e should be multiplied x+1 times before subtracting 1 to it. However, when it is rendered in speech like a general string, it is difficult to identify the portion of the equation in the superscript and the remainder of it after the superscript.
+To effectively do this, we must map information presented through visual cues such as spatialisation to their auditory equivalent. Mathematics, in its visual form, gives the reader a very high level granularity in perceiving the equation. The advent of markups like MathML give way to programatically identify the visual cues and the semantics of a mathematical expression. The ability to identify the visual cues can be used to enable text to speech systems to speak mathematics with minimum or no ambiguity. Rendering mathematics in audio can also be very advantageous to people with various print disabilities like visual impairment, dislexia, etc.
+
+
+One way to solve the problem of rendering mathematical equations in audio is to add additional information while speaking out the equation. 
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+\subsection{Review of the Existing Methods}
+\label{ssec:previous}
+
+There have been several attempts to present mathematical content through alternative modes to vision. Efforts dating back to 1946 have been made to formulate standards for presenting math through Braille and speech. Nemeth Code\cite{nemeth1973nemeth} is a special type of Braille used for math and science notations. With Nemeth Code, one can render all mathematical and technical documents into six-dot Braille.
+Dr T.V Raman has developed an audio system for technical readings (ASTER)\cite{raman1998audio}. ASTER is a computing system for producing audio renderings of electronic documents. The present implementation works with documents written in the TEX family of markup languages: TEX, LaTeX and AMS-TEX.A more recent attempt has been made by a company called design science. They developed an internet explorer plugin called MathPlayer that displays and speaks out mathematical content marked up in MathML\cite{soiffer2005mathplayer}.
+
+
+There have been attempts to form a set of guidelines to effectively speak mathematics in audio. The handbook for spoken mathematics \cite{chang1983handbook} gives an account of such an attempt. An article on how to speak math also describes the challenges in speaking mathematics to and by a computer \cite{fateman1998can}. 
+
+Section \ref{sec:basis} explains the motivation for the proposed ideas. Sections \ref{ssec:t1} through \ref{ssec:t5} explain the proposed techniques.  Section \ref{sec:equations} gives the criterion behind selecting the equations. Section \ref{sec:eval} explains the experiment and \ref{ssec:parameters} outline the evaluation criteria. Section \ref{sec:results} shows the results.
+
+
+
+
+\section{Basis for the proposed Techniques}
+\label{sec:basis}
+
+
+A set of equations(\ref{appendix:eq1})  were formed and were recorded by people trained in teaching math to visually challenged students. We noticed a difference in the speaking pattern while certain parts of the mathematical expressions were spoken. The variations used by the speakers to effectively convey the equations are:
+\begin{itemize}
+   \item Pauses.
+   \item Intonation Variations.
+   \item Pitch Variations.
+   \end{itemize}
+
+
+  A subjective analysis was performed taking the listening effort and the comprehendibility of the equation into consideration. The results from this experiment are shown in the figure below.  It was observed that the highest listening effort was encountered when the equations had the following issues :
+\begin{itemize}
+   \item Quantification.
+   \item Superscripting and subscripting.
+\item Handling fractions.
+   \end{itemize}
+
+\begin{figure}[h]
+\label{fig:res}
+
+\begin{minipage}[b]{1.0\linewidth}
+  \centering
+  \centerline{\includegraphics[width=4.5cm]{listening}}
+ \centerline{Listening Effort}\medskip
+%  \vspace{2.0cm}
+  \centerline{Fig: Evaluation Results of equations spoken manually}\medskip
+\end{minipage}
+\end{figure}
+
+  
+We now provide more details on the rational behind the idea of enhancing these aspects of a mathematical expression while rendering it in audio.
+
+\subsection{QUANTIFICATION}
+\label{ssec:quantify}
+
+Most of mathematical equations contain expressions in parentheses. for instance, consider the equation
+$(A+B)*(C+D)+E$
+It may seem that the equation can just be treated as a general string of text while rendering it in audio. However, this will create a confusion in the listener. the equation is spoken as "left parenthesis A plus B right parenthesis times left parenthesis C plus D right parenthesis plus E plus F times G equals K" or " A plus B times C plus D plus E plus F times G equals K". In the former case, the user will have to keep a track of all the parentheses when he listens to the equation. This becomes a hectic task for bigger equations and also results in deviating the listener's attention from concentrating on the actual contents of the equation. On the other hand, in the latter
+case, the user gets an ambiguous representation of the equation. He may interpret the spoken form of the equation as \\
+$A+(B*C)+D+E+F*G = K$ \\ [1ex]
+or
+$(A+B)*(C+D+E+F)*G = K$ \\ [1ex]
+or
+$(A+B)*(C+D+E+F*G) = K$\\[1ex]
+We will have to add additional information to the equation to solve this ambiguity.
+
+%\Tree[.A [.(B*C)]]
+
+\subsection{SUPERSCRIPTING AND SUBSCRIPTING}
+\label{ssec:supsub}
+
+
+
+Today’s screen readers and TTS engines do not effectively convey the equations with superscript and subscript content. They often do not speak out the parts of the equation contained in the superscript and subscript. They often speak out such content continuously, with the rest of the equation. For instance, let us say the expression is $E^X$. With the currently available technologies, the expression would be rendered as “EX”. This does not give the listener the information that X is in the superscript and the listener may understand the expression as $E*X$. In expressions where there are at least 2 variables that cause a phonetic sound when spoken together, the general TTS treats the expression as a complete word. consider the expression $A^B$. The TTS speaks it as “ab”. In case of numbers, say we have an expression $5^{2^5}$, the TTS reads it as “five hundredtwenty five” or “five two five”. We come across the same issues while trying to render subscript text. In addition to these problems, the real challenge lies in effectively conveying the spatial orientation of the different parts of the equation. That is, the equation, rendered in audio must give the listener a view of what content is in the superscript and the subscript. The listener must also be notified when the part of a mathematical expression in the superscript or subscript ends; The listener should understand that any thing that he listens to after the end is in the baseline or the general part of the equation, unless specified. We must provide the user with different cues for superscript and subscript content.
+
+
+\subsection{HANDLING FRACTIONS}
+\label{ssec:fractions}
+
+Fractions, like the other mathematical concepts discussed above can not be treated like a general string of text. The key information that has to be conveyed to the user in addition to the contents of the fraction is the beginning of the fraction, the content of the fraction in numerator and denominator and the end of the fraction. The audio equivalent of the equation should effectively be able to convey nested fractions in addition to the regular fractions to the listener.
+
+
+The proposed techniques are aimed at enhancing the above mentioned aspects in the expressions using the cues intuitively employed by humans to speak math. 
+
+\section{PROPOSED SYSTEM AND TECHNIQUES}
+\label{sec:proposedsystem}
+
+Based on the audio recordings from special educators and teachers, we could form a few rules and techniques to render mathematics in audio. We developed systems that incorporated these rules and techniques to render math in audio. The system takes presentation markup MathML as the input format for math and outputs audio in wav format. We made use of festival for speech synthesis. The equations are converted to SABLE markup and are given to the festival speech synthesis system for speech generation. 
+
+
+
+\subsection{TECHNIQUE 1 : General system with Verbal Cues}
+\label{ssec:t1}
+
+We developed a system that would render mathematical equations in audio just as any other text to speech system would do. The only addition is that the audio contains spoken form of some of the visual elements such as superscript, subscript, etc. The system converts the MathML into text and speaks it out.
+
+
+\subsection{TECHNIQUE 2 : Equations with Pauses and Special Sounds}
+\label{ssec:t2}
+
+In visual communication, icons and symbols are used as indications for some types of information. In the context of mathematical expressions, the user can perceive the type of elements ( superscripts, subscripts, etc ) by getting a glance at the equation. A person has the advantage of perceiving a lot of information of the equation even before looking at the actual contents of the equation. We make an attempt to provide the equation such that a person gets a similar advantage when he listens to it. We make use of special sounds or ear cons while presenting the equations. It may seem obvious that text to speech is the easiest way to convey equations and speaking every detail provides direct information. However, listening to speech results in more mental stress. For instance, We can not converse when we are listening to speech from an other source\cite{dingler2008learnability}.
+Replacing speech with sounds is not the most effective way to tackle the problem of presenting mathematic equations in audio. We make use of paralinguistic cues including, but not limited to sounds.
+The cues presented in this method include:
+\begin{itemize}
+\item Pauses to convey certain parts of an equation.
+These pauses are mainly used to separate parts of mathematical expressions. Consider $(A+B)^2$ and $(A+B^2)+1$.
+It would sound more natural and intuitive if the expressions are spoken as "the quantity A + B pause superscript 2 " and " the quantity A + B superscript 2 pause +1 “.
+\item Sounds to indicate certain symbols and mathematical operations.  Sounds are used to indicate superscripts, subscripts, roots, under scripts, over scripts and under script-over script combination.
+\end{itemize}
+We chose sounds that would be pleasant to the ear and that are passively noticed by a listener. That is, the sounds will not be too obtrusive to the listener if he is paying more attention to what is being spoken. At the same time, The sounds will not go completely unnoticed even if the listener is not paying complete attention and expecting a sound. We used sounds such as the “ding” and a few variations of the sound.
+
+
+
+
+\subsection{TECHNIQUE 3: Equations with Pitch and Rate Variations}
+\label{ssec:t3}
+
+Screen reader users are familiar to pitch changes. Generally, a high pitch is used to denote capitals and a low pitch is used to denote tool tip messages. On observing the human recorded equations explained in section \ref{sec:basis}, we observed that speakers tend to modulate the pitch as they read aloud certain parts of a mathematical expression. It has been observed that certain parts of a mathematical expression are spoken at a faster rate to indicate that it is a sub expression and to isolate it from the rest of the expression.
+In this technique,we used pitch and rate changes to denote certain mathematical attributes. The pitch and rate increase while speaking out the superscript text and decrease while speaking the subscript text. The system does the same with fractions. The numerator is spoken in a higher pitch and the denominator is spoken in a lower pitch. similarly, quantities in a root are spoken at a faster rate. table \ref{table:pitchandrate} shows the pitch and rate variation(in percentage) that is applied to the mathematical equation. The variation is with respect to the base pitch and rate of the TTS in general. 
+
+
+
+\begin{table}[t]
+\caption{Pitch and Rate Variations}
+
+\vspace{8pt} % Gap between title and text
+
+% title of Table
+\centering
+% used for centering table
+\begin{tabular}{|c | c | c | }
+% centered columns (4 columns)
+\hline%\hline %inserts double horizontal lines
+Term & Pitch Variation & Rate variation \\[0.5ex]
+% inserts table
+%heading
+\hline
+% inserts single horizontal line
+Superscript & 50 & 20  \\
+% inserting body of the table
+Subscript & -50 & -20  \\
+Fraction & 25 & -25  \\
+Underscript & -60 & -25  \\
+Overscript & 60 & 25\\ %[1ex]
+% [1ex] adds vertical space
+\hline
+%inserts single line
+
+
+\end{tabular}
+\label{table:pitchandrate}
+% is used
+%to refer this table in the text
+\end{table}
+
+
+
+
+\subsection{TECHNIQUE 4: Equations with Audio Spatialisation}
+\label{ssec:t4}
+In this technique, We made an attempt to draw a closer analogy to the spatial positioning of various variables and numbers of a mathematical equation. The listener gets the illusion that the superscript part of the math expression is spoken from above his head and the rest at the usual level using the Head Related Transfer Function (HRTF) \cite{geronazzo2011head}.  Table 
+\ref{table:hrtf} shows the sets of angles chosen for the different parts of the equation such as superscript, etc. 
+
+
+\begin{table}[t]
+\caption{Sets of HRTF angles for audio spatialisation}
+
+\vspace{8pt} % Gap between title and tex
+
+% title of Table
+\centering
+% used for centering table
+\begin{tabular}{| c | c | c |}
+% centered columns (4 columns)
+\hline%\hline %inserts double horizontal lines
+Term & Elevation Angle & Azimuth Angle \\[0.5ex]
+% inserts table
+%heading
+\hline
+% inserts single horizontal line
+Superscript & 90 & 30  \\
+% inserting body of the table
+Subscript & -90 & 30  \\
+Fraction & 270 & 45  \\
+Underscript & -90 & 45  \\
+Overscript & 90 & 30\\ %[1ex]
+% [1ex] adds vertical space
+\hline
+%inserts single line
+
+
+\end{tabular}
+\label{table:hrtf}
+% is used
+%to refer this table in the text
+\end{table}
+
+
+
+
+
+\subsection{TECHNIQUE 5: Equations with Pitch variations and Special tones}
+\label{ssec:t5}
+
+
+We rendered the equations in audio by varying the pitch, adding pauses, emphasising the speech and added sounds at required parts of the math equation. As explained in technique 3, we have made pitch and rate manipulation while rendering superscripts, subscripts, fractions, under scripts and overscripts. In addition to the paralinguistic cues, we have also added sounds to indicate the listener before hand that he must expect one of the above mentioned variations ( superscripts, subscripts, etc). The sounds used here are the same as the ones used in rendering math using technique 2.
+
+
+
+
+\section{SELECTION OF THE EQUATIONS}
+\label{sec:equations}
+
+Selection  of suitable equations is a critical component to evaluate the proposed systems. The goal of this experiment is to identify the impact the length of the equation and the number of the variables in the equation have on the listener’s ability to remember the equation. The listener was asked to reproduce(write) the equation after making him/her listen to it. The listener will be given equations recorded by special educators. The rationale behind using the equation recorded by a real human is that the listener’s response should not be effected by the audio quality (voice, accent, etc). 
+
+
+We hand picked a set of 12 equations(Appendix \ref{appendix:eq2}) and rendered them in audio. The equations consist of different combinations of mathematical attributes that must be rendered differently. The equations also vary in length and the number of variables. It was ensured that the selected equations were semantically unrelated.
+
+
+
+
+ 
+\section{EVALUATION}
+\label{sec:eval}
+
+Each participant was made to listen to 18 equations and his responses were recorded. Equations 1-3 were recorded by people familiar with reading math to people with print disabilities. Equations 3 to 6 are rendered with the methods outlined in section \ref{ssec:t1}, equations 6 to 9 are rendered using methods outlined in \ref{ssec:t2}, equations 10 to 12 using methods from \ref{ssec:t3}, equations 13 to 15 with \ref{ssec:t4} and 16 to 18 with \ref{ssec:t5}.
+
+
+22 participants wer made to perform the subjective analysis of the systems. The participant will have to reproduce the equation he/she listens to. In addition to the equation, the listener will have to evaluate the system based on a few other parameters. We arrived at these parameters partly by following the listening test procedures followed in blizzard challenges \cite{hinterleitner2011evaluation} and our own analysis.
+
+
+\subsection{PARAMETERS}
+\label{ssec:parameters}
+
+On a scale of 1-5, the participants were asked to evaluate our systems on the following parameters.
+
+\begin{itemize} 
+
+ \item Listening effort.
+ \item   Intonation(1=ineffective and 5 = very effective)
+ \item   Acceptance(1=poor, 5=good).
+ \item   Speech pauses( 1=not noticeable and 5=very prominent)
+5 means that the pauses are having a negative impact on the participant’s ability to understand the equation in audio.
+ \item   Accentuation(1=poor and 5=very prominent). \cite{hinterleitner2011evaluation}
+Similar to speech pauses, 5 indicates that the speech is too accentuated.
+ \item   Content familiarity.(1=totally new concept and 5 = very familiar).
+1 indicates that the user is not acquainted to the terminology used in the equation. In this case, the participant’s response for that particular equation can not be considered completely as he may have entered a wrong response due to the lack of domain knowledge, not due to the lack of understanding of the audio.
+ \item   Effectiveness of additional cues such as sounds, pitch and rate variations, change in direction, etc. ( 1 = hardly noticeable and 5 = very helpful).
+ \item   Number of repetitions of each equation.
+\end{itemize}
+
+
+%\begin{center}
+\begin{table*}[t]
+\centering
+\caption{Evaluation of the proposed systems}
+
+\vspace{8pt} % Gap between title and text
+
+% title of Table
+%\centering
+% used for centering table
+\begin{tabularx}{\textwidth}{|c |c |c |c |c |c |c |}
+% centered columns (4 columns)
+\hline%\hline %inserts double horizontal lines
+Parameter & Human & Technique\#1 & Technique\#2 & Technique\#3 & Technique\#4 & Technique\#5 \\[0.5ex]
+% inserts table
+%heading
+\hline
+% inserts single horizontal line
+Intonation Variation & 4.26 & 1.6 & 2.3 & \textbf{4.7} & 4.32 & 4.68 \\
+\hline
+% inserting body of the table
+Pitch  Variation& 4.17 & 1.4 & 1.4 & 4.43 & \textbf{4.82} & 4.36\\
+\hline
+Pauses & 3.1 & 2.15 & \textbf{4.15} & 3.7 & 3.7 & 3.87 \\
+\hline
+Listening Effort & 2.5 & 4.4 & 3.5 & \textbf{2.3} & 2.64 & 2.47\\
+\hline
+Content Familiarity &2.7 &2.7 &2.7 &2.7 &2.7 &2.7\\
+\hline
+Effectiveness of additional cues &3.2 &1.2 &1.82 & 4.32 & \textbf{4.37} & 4.23\\
+\hline
+Accentuation &\textbf{4.3} &2.5 & 2.3 & 3.2 & 3.6 & 3.47\\
+\hline
+Number of repititions(Mode) &2 & 4 & 3 & 2 & 2 & 2\\
+\hline
+Mean Opinion Score & 4.42 & 1.89 & 2.27 & 4.37 & \textbf{4.62} & 4.35\\ %[1ex]
+% [1ex] adds vertical space
+\hline
+%inserts single line
+
+
+\end{tabularx}
+\label{table:eval}
+% is used
+%to refer this table in the text
+\end{table*}
+%\end{center}
+
+  %\centering
+
+
+\section{Results and Conclusion}
+\label{sec:results}
+
+Table \ref{table:eval} contains the normalized scores(1 to 5) calculated over the responses for all the equations. In case of the number of repitions of the equation, the  mode value( most occuring value) is presented.
+
+
+\begin{figure}[h]
+\label{fig:mos}
+
+\begin{minipage}[b]{1.0\linewidth}
+  \centering
+  \centerline{\includegraphics[width=4.5cm]{mos}}
+%  \vspace{2.0cm}
+  \centerline{ Figure 2:Overall Acceptance of the systems}\medskip
+\end{minipage}
+\end{figure}
+
+
+
+\subsection{ANALYSIS}
+\label{ssec:analysis}
+On analysing the data from the experiment( section \ref{sec:eval}), it is observed that the participants are able to understand the human spoken equations. More over, it can be clearly seen from table \ref{table:eval} that generating spoken forms of mathematical equations without making any enhancements( technique 1, section \ref{ssec:t1}) is not capable of rendering math effectively. It can also be inferred that making use of just  a few paralinguistic cues, sounds and pauses as explained in section \ref{ssec:t2} will not suffice either. Also,it is evident that the pitch and rate changes while rendering certain parts of the mathematical expressions have proven to be helpful to the participants in comprehending the expression. In the method described in section \ref{ssec:t4}, the user has been able to draw an annalogy to the print form of mathematics. Table \ref{table:eval} shows that the participants had to put minimum effort in understanding the equation. It has been observed that the method explained in section \ref{ssec:t2} did not prove to be helpful to the listeners. However, from the table \ref{table:eval} and the values corresponding to the technique explained in section \ref{ssec:t5}, it is evident that use of  cues( pauses and rate variations ) in addition to special sounds can be significantly effective in helping a listener. The key difference between technique 3(section \ref{ssec:t3}) and technique 5(\ref{ssec:t5} is the addition of sounds. Moreover, it can be observed that pauses were more helpful in understanding equations rendered using technique 5 when compared to technique 3. Pauses were more noticeable in technique 3 and when it is combined with technique 2, it enhances the effectiveness of the pauses. From this observation, we can conclude that a combination of these techniques may prove to be more effective in some cases. However, it is difficult to conclude that a specific technique is the ideal way of rendering mathematical equations in audio. 
+
+Figure 2 shows the overall acceptance of each of the proposed techniques as rated by the participants. The proposed techniques show an improvement over the output that can be achieved from the traditional TTS systems.
+
+
+
+
+we
+\appendix
+\section{equations recorded by human voice}
+\label{appendix:eq1}
+$X=Y$ \\ [1ex]
+$X+Y=z$ \\ [1ex]
+$\frac{X+Y}{K}=\alpha$ \\ [1ex]
+$(X+Y)^K = 3*X^K+4*X^y-5Y^{K+X}$ \\ [1ex]
+$(X+Y)^{P+Q} = X^{P*Q}+Y^P*Q-P+\frac{Q}{Y}-\frac{P}{Q-X}$ \\ [1ex]
+$\frac{(P+X)*(Q-Y)}{(X+Y)^K} = \frac{P}{X+K}-Q*(\frac{K^x}{Y-P})$ \\ [1ex]
+$\frac{X+Y}{K}=\alpha$ \\ [1ex]
+$(X+Y)^K = 3*X^K+4*X^y-5Y^{K+X}$ \\ [1ex]
+
+\section{equations for testing the systems}
+\label{appendix:eq2}
+$1+2+3-5+4+2+3 = (3+2)*(1+1)$ \\ [1ex]
+$\lim_{x \to +\infty} \frac{3x^2 +7x^3}{x^2 +5x^4} = 3.$ \\ [1ex]
+$\displaystyle \frac{\partial}{\partial x} x^2y = 2xy$ \\ [1ex]
+$\frac{\partial u}{\partial t} \\ [1ex]
+   = h^2  - E^{n+1}-1 $ \\ [1ex]
+$\int_0^R \frac{2x\,dx}{1+x^2} = \log(1+R^2).$ \\ [1ex]
+$\int_0^{+\infty} x^n e^{-x} \,dx = n!.$ \\ [1ex]
+$(P+Q)^K+R = P^K*Q+Q^K*P+R^{P*Q}*K+\frac{P^Q*K+1}{R}$ \\ [1ex]
+$(P+Q)*(R+K) = (P+R)^Q-(K+R^Q)+\frac{R+Q^K}{(R+Q)^K+1}$ \\ [1ex]
+
+$(P+Q)*(R+K) = (P+R)^Q-(K+R^Q)+\frac{R+Q^K}{(R+Q)^K+1}$ \\ [1ex]
+$\frac{X_1^K+X_2^K}{P^X_3*5^x_4}+E^X = e^{\frac{X_{K+1}+X_{K+2}}{(X+Y)}}$ \\ [1ex]
+$\sqrt[P+Q]{A+K^P + A^{K+P}}=\frac{(K+P)(K-P)}{K*(P+K)}$ \\ [1ex]
+$\sum_{i=1}^{\infty} \frac{1}{i^2}+5i+\sqrt[3]{i+1} = \frac{\pi^2+4\pi^3+\sqrt[\pi+i]{9*\pi}}{6}$ \\ [1ex]
+$(\frac{X+Y}{K}+1)^3=\sqrt[3]{X}+\sqrt[3]{Y}+(X*Y)/3+\frac{X+Y}{3+K}+3$ \\ [1ex]
+
+%\label{sec:ref}
+
+
+
+% References should be produced using the bibtex program from suitable
+% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
+% style file from IEEE produces unsorted bibliography list.
+% -------------------------------------------------------------------------
+\bibliographystyle{IEEEbib}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,12 @@
+references:
+1.
+http://www.dessci.com/en/reference/accessibility/
+2.
+
+http://www.washington.edu/doit/Stem/articles?42
+3.
+http://www.brailleauthority.org/mathscience/nemeth1972.pdf
+4.
+Audio System for Technical Readings
+5. MathPlayer by design science
+http://www.dessci.com/en/products/mathplayer/

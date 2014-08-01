@@ -1,0 +1,1 @@
+<?xml version="1.0"?><!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN" "Sable.v0_2.dtd" []><SABLE>1 plus<EMPH>fraction</EMPH><BREAK LEVEL="Medium"/><RATE SPEED="+25%"><PITCH BASE="+25%">x</PITCH></RATE>divided by<RATE SPEED="+25%"><PITCH BASE="-25%">y</PITCH><BREAK LEVEL="Large"/></RATE><BREAK LEVEL="Medium"/>plus 190</SABLE>

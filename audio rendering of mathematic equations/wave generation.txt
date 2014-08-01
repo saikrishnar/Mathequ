@@ -1,0 +1,2 @@
+text2wave equation.sable -o myfile.wav
+
